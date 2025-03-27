@@ -1,0 +1,70 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+%\usepackage[portuguese]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Relatório do EP de MAC0209}
+\author{Andre Neves, Luis Vergara, Thiago}
+
+\begin{document}
+\maketitle
+
+
+\begin{abstract}
+No processamento de sinais digitais, o teorema de amostragem de Nyquist-Shannon estabelece que a taxa de amostragem deve ser pelo menos duas vezes a largura de banda (bandwidth) do sinal para evitar aliasing.
+Estudamos as funções seno, logaritmo e arctan, fazemos uma amostragem delas e quantizamos os dados para reconstruir o sinal em um sinal de tempo discreto.
+
+\end{abstract}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Introdução}
+
+Na eletrônica digital, os sinais digitais são representados como ondas de pulso, que geralmente são geradas pela comutação (switching) de um transistor.
+Devido à natureza das ondas de pulso, o processamento de sinal é melhor feito por meio do uso de funções de tempo discreto, em contraste com sinais brutos que geralmente são representados por funções de tempo contínuo.
+Nesse sentido, convertemos o sinal de tempo contínuo em um de tempo discreto, por meio de um processo chamado quantização.
+O primeiro passo na quantização de um sinal é a amostragem, que envolve obter uma "amostra" da função de tempo contínuo original e usá-la para reconstruir o sinal para obter uma de tempo discreto.
+
+\section{Objetivos}
+
+Entender os conceitos de precisão, acuracia e algarismos significativos, bem como analisar os erros da amostragem, levando em consideração o teorema de Nyquist-Shannon.
+
+\section{Cronograma}
+
+Cronograma:  
+
+2025-03-06: Analisar o enunciado do problema.  
+
+2025-03-08: Escrever o codigo para plotar o grafico.  
+
+2025-03-10: Plotar o erro absoluto.  
+
+2025-03-26: Analisar resultados e escrever o relatório.  
+
+\section{Dados e métodos}
+
+\section{Resultados}
+
+O periodo da função seno é $2\pi$. A frequência de amostragem de nosso experimento foi:  
+$$\displaystyle\frac{10}{10-(-10)} = 0.5 \text{ Hertz (amostras por segundo)}$$
+
+\section{Discussão}
+
+Aplicamos o teorema de Nyquist-Shannon ao escolher nossa frequência para amostragem para evitar aliasing durante a interpolação do sinal de tempo discreto, e verificamos o teorema obtendo uma nova função com uma frequência não menor que o sinal de tempo contínuo original.
+Embora as três funções fossem simples, as funções seno, log e arctan são representativas de sinais da vida real, e nos permitem aplicar a quantização e o teorema de Nyquist-Shannon de forma controlada.
+
+\end{document}
